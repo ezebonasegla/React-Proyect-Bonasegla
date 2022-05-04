@@ -1,33 +1,30 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import { Navbar, Nav, Container } from "react-bootstrap"
+import { Outlet, Link } from "react-router-dom"
 
-const navbar = () => {
+const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">BonaDrinks</Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav mx-auto">
-                        <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/aboutUs">Acerca de Nosotros</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/shop">Tienda</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to='/cart'>Carrito</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <>
+            <Navbar className="navBg" variant="dark" expand="lg">
+                <Container>
+                    <Navbar.Brand as={Link} to="/" >
+                        <img src={"./logoBonaDrinks.png"} alt="" />
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link as={Link} to="/" >Inicio</Nav.Link>
+                            <Nav.Link as={Link} to="/aboutUs">Acerca de Nosotros</Nav.Link>
+                            <Nav.Link as={Link} to="/shop">Tienda</Nav.Link>
+                            <Nav.Link as={Link} to="/cart">Carrito</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+            <section>
+                <Outlet></Outlet>
+            </section>
+        </>
     )
 }
-
-export default navbar
+export default NavBar
