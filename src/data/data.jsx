@@ -1,5 +1,5 @@
 
-export const productos = [
+export const products = [
   { id: '1', type: 'vodka', name: 'Absolut Vodka Apple', price: 2700, stock:5, img: '/assets/img/productos/vodka/absolut-apple.webp' },
   { id: '2', type: 'vodka', name: 'Smirnoff Citrus', price: 900, stock:5, img: '/assets/img/productos/vodka/smirnoff-vodka-citrus.webp' },
   { id: '3', type: 'vodka', name: 'Smirnoff Raspberry', price: 900, stock:5, img: '/assets/img/productos/vodka/smirnoff-vodka-raspberry.webp' },

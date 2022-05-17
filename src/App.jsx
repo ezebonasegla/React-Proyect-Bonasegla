@@ -1,6 +1,6 @@
-import './App.scss';
+import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Inicio from './components/pages/Inicio.jsx';
 import AboutUs from './components/pages/AboutUs.jsx';
 import Shop from './components/pages/Shop.jsx';
@@ -13,15 +13,16 @@ function App() {
 
       <BrowserRouter>
         <Routes>
+        
           <Route path='/' element={<NavBar />}>
             <Route index element={<Inicio />} />
             <Route path='aboutUs' element={<AboutUs />} />
             <Route path='shop' element={<Shop />} />
             <Route path='*' element={<Navigate replace to="/" />} />
+            <Route path ="/detail/:id/:name" element ={<ItemDetailContainer />}/>
           </Route>
         </Routes>
       </BrowserRouter>
-      <ItemListContainer greeting={'Hola soy el ItemListContainer'} />
     </div>
   );
 }

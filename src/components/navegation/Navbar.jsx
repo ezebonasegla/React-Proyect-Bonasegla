@@ -1,6 +1,9 @@
 import { Navbar, Nav, Container } from "react-bootstrap"
 import { Outlet, Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget.jsx"
+import './Navbar.scss'
+import logo from "../assets/logoBonaDrinks.png";
+
 
 const NavBar = () => {
     return (
@@ -8,7 +11,7 @@ const NavBar = () => {
             <Navbar className="navBg" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand as={Link} to="/" >
-                        <img src={"./logoBonaDrinks.png"} alt="" />
+                        <img src={logo} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
