@@ -10,7 +10,17 @@
     font-size: 18px;
     font-weight: 500;
     color: black;
-    border-radius: 15px;
+    border-radius: 8% !important;
+}
+
+.p-name{
+    padding-top: 5%;
+    color: black;
+    font-weight: 700;
+}
+
+.link{
+    text-decoration: none;
 }
 
 .card-image {
@@ -18,5 +28,4 @@
     max-height: 12em;
     min-height: 12em;
     border-radius: 5px;
-    margin: auto;
 }

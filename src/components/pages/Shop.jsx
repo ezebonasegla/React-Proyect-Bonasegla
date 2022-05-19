@@ -5,7 +5,7 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 const shop = () => {
     return (
-        <div>
+        <div className='view'>
             <h1>Tienda</h1>
             <ItemListContainer />
         </div>

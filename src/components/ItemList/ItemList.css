@@ -1,7 +1,55 @@
-.item-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
 
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.view {
+    background: radial-gradient(1100px at 50% 50%, #fff 20%, #ccdc8c 100%);
+}
+
+.view h1 {
+    padding-top: 3px;
+    text-align: center;
+    font-family: 'Oswald', Helvetica, sans-serif;
+    font-size: 60px;
+    margin: auto;
+    transform: skewY(-5deg);
+    letter-spacing: 4px;
+    word-spacing: -8px;
+    color: #051922;
+    text-shadow:
+        -1px -1px 0 #ccdc8c,
+        -2px -2px 0 #ccdc8c,
+        -3px -3px 0 #ccdc8c,
+        -4px -4px 0 #ccdc8c,
+        -5px -5px 0 #ccdc8c,
+        -6px -6px 0 #ccdc8c,
+        -7px -7px 0 #ccdc8c,
+        -8px -8px 0 #ccdc8c,
+        -30px 20px 40px dimgrey
+}
+
+h1:first-letter {
+    text-transform: uppercase;
+}
+
+.item-list {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    min-height: calc(100vh - 85px);
+}
+
+@media (min-width: 600px) {
+    .item-list {
+        min-height: calc(100vh - 50px);
+    }
+}
+
+@media (min-width: 768px) {
+    .item-list {
+        min-height: calc(100vh - 59px);
+    }
 }

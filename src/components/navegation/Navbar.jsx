@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container } from "react-bootstrap"
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap"
 import { Outlet, Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget.jsx"
 import './Navbar.scss'
@@ -18,7 +18,11 @@ const NavBar = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/" >Inicio</Nav.Link>
                             <Nav.Link as={Link} to="/aboutUs">Acerca de Nosotros</Nav.Link>
-                            <Nav.Link as={Link} to="/shop">Tienda</Nav.Link>
+                            <NavDropdown title="Nuestros Productos" id="basic-nav-dropdown">
+                                <NavDropdown.Item as={Link} to="/shop">Todos los Productos</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/category/vodka">Vodka</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/category/whisky">Whisky</NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
