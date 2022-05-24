@@ -13,7 +13,7 @@ function Item({ product }) {
         </Link>
         <div>${product.price}</div>
         <br></br>
-        <ItemCount stock={product.stock} initial={1} onAdd={(count) => alert(`Has agregado ${count} ${product.name} al carrito`)} />
+        <ItemCount stock={product.stock} initial={1} onAdd={(quantity) => alert(`Has agregado ${quantity} ${product.name} al carrito`)} />
       </div>
     </div>
   )

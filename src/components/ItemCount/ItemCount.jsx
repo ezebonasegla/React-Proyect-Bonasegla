@@ -1,15 +1,24 @@
 import { useState } from "react";
 import "./ItemCount.css";
 
-export default function ItemCount({ stock, initial, onAdd }) {
-  const [count, setCount] = useState(initial);
+export default function ItemCount({ stock, initial, onAdd, handleInputType }) {
+  const [quantity, setQuantity] = useState(initial);
 
-  const addProducts = (number) => {
-    setCount(count + number);
-  };
+  function increase() {
+    if ( quantity < stock ) {
+      setQuantity(quantity + 1);
+    }
+  }
+
+  function decrease() {
+    if ( quantity > 1 ) {
+      setQuantity(quantity - 1);
+    }
+  }
 
   function addToCart() {
-    onAdd(count);
+    onAdd(quantity);
+    handleInputType();
   }
 
   return (
@@ -17,16 +26,16 @@ export default function ItemCount({ stock, initial, onAdd }) {
       <div className="count-container">
         <button
           className="button-container"
-          onClick={() => addProducts(-1)}
-          disabled={count <= 1 ? true : null}
+          onClick={decrease}
+          disabled={quantity <= 1 ? true : null}
         >
           -
         </button>
-        {count}
+        {quantity}
         <button
           className="button-container"
-          onClick={() => addProducts(+1)}
-          disabled={count === stock ? true : null}
+          onClick={increase}
+          disabled={quantity === stock ? true : null}
         >
           +
         </button>

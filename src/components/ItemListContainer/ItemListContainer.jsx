@@ -16,7 +16,7 @@ function ItemListContainer() {
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     items
@@ -27,9 +27,11 @@ function ItemListContainer() {
   }, []);
 
   return (
-    <div>
-      {loading ? <Loader/> : (<ItemList products={products} id={id} />)}
-    </div>
+
+    <>
+      {loading ? <Loader />
+        : (<ItemList products={products} id={id} />)}
+    </>
   )
 }
 
