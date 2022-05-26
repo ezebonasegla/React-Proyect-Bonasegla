@@ -1,37 +1,31 @@
 import { useEffect, useState } from "react";
-import { products } from "../../data/data"
 import Loader from "../Loader/Loader";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-
-const findItem = (id) => {
-  return new Promise ((resolve) =>{
-    setTimeout(() => {
-        const itemDet = id ? products.find(product => product.id === id) : products
-        resolve (itemDet)
-    },1000);
-  });
-}
+import { getFirestore, getDoc, doc } from 'firebase/firestore'
 
 
-function ItemDetailContainer({}) {
+
+function ItemDetailContainer({ }) {
 
   const [product, setProduct] = useState([]);
-  const[loading, setLoading] = useState([true]);
-  const {id} = useParams()
+  const [loading, setLoading] = useState([true]);
+  const { id } = useParams()
 
-  useEffect(() =>{
-    findItem(id)
-    .then((resp) =>{setProduct(resp)})
-    .catch((err) =>{console.log(err)})
-    .finally(() => setLoading(false))
-  },[])
+  useEffect(() => {
+    const db = getFirestore()
+    const dbQuery = doc(db, 'productos', id)
+    getDoc(dbQuery)
+      .then(resp => setProduct({ id: resp.id, ...resp.data() }))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
+  }, [])
 
- 
+
   return (
     <>
-    {loading ? <Loader/>
-    : (<ItemDetail product={product}/>)}
+      {loading ? <Loader />
+        : (<ItemDetail product={product} />)}
     </>
   )
 }

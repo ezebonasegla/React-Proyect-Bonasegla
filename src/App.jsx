@@ -8,24 +8,26 @@ import Cart from './components/pages/Cart';
 import NavBar from './components/navegation/Navbar.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import CartContextProvider from "./Context/CartContext";
 
 function App() {
   return (
     <div className="App">
 
       <BrowserRouter>
-        <Routes>
-        
-          <Route path='/' element={<NavBar />}>
-            <Route index element={<Inicio />} />
-            <Route path='aboutUs' element={<AboutUs />} />
-            <Route path='shop' element={<Shop />} />
-            <Route path='/category/:id' element={<ItemListContainer />} />
-            <Route path='*' element={<Navigate replace to="/" />} />
-            <Route path ="/detail/:id/:name" element ={<ItemDetailContainer />}/>
-            <Route path='cart' element={<Cart/>}/>   
-          </Route>
-        </Routes>
+        <CartContextProvider>
+          <Routes>
+            <Route path='/' element={<NavBar />}>
+              <Route index element={<Inicio />} />
+              <Route path='aboutUs' element={<AboutUs />} />
+              <Route path='shop' element={<Shop />} />
+              <Route path='/category/:id' element={<ItemListContainer />} />
+              <Route path='*' element={<Navigate replace to="/" />} />
+              <Route path="/detail/:id/:name" element={<ItemDetailContainer />} />
+              <Route path='cart' element={<Cart />} />
+            </Route>
+          </Routes>
+        </CartContextProvider>
       </BrowserRouter>
     </div>
   );
