@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./ItemCount.css";
+import { faPlus, faMinus, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ItemCount({ stock, initial, onAdd, handleInputType }) {
   const [quantity, setQuantity] = useState(initial);
@@ -29,7 +31,7 @@ export default function ItemCount({ stock, initial, onAdd, handleInputType }) {
           onClick={decrease}
           disabled={quantity <= 1 ? true : null}
         >
-          -
+          <FontAwesomeIcon icon={faMinus} />
         </button>
         {quantity}
         <button
@@ -37,11 +39,11 @@ export default function ItemCount({ stock, initial, onAdd, handleInputType }) {
           onClick={increase}
           disabled={quantity === stock ? true : null}
         >
-          +
+          <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
       <button className="button-cart"
-      onClick={addToCart}>Agregar al carrito</button>
+      onClick={addToCart}><span> <FontAwesomeIcon icon={faCartPlus} /> </span> Agregar al carrito</button>
     </div>
   );
 }

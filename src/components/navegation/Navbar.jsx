@@ -22,6 +22,9 @@ const NavBar = () => {
                                 <NavDropdown.Item as={Link} to="/shop">Todos los Productos</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/category/vodka">Vodka</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/category/whisky">Whisky</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/category/fernet">Fernet</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/category/energizante">Energizante</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/category/champagne">Champagne</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

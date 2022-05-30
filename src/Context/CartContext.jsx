@@ -27,12 +27,16 @@ const CartContextProvider = ({children}) => {
         }
     }
 
-    const deleteItem = (id) => {
-        const newCart = [...cartList];
-        let i = newCart.findIndex((p) => p.id === id);
-        newCart.splice(i,1);
+    function removeFromCart(id) {
+        setCartList(cartList.filter(p => p.id !== id))
+    }
 
-        setCartList([...newCart])
+    function totalQuantity() {
+        return cartList.reduce((acc, p) => acc + p.quantity, 0)
+    }
+
+    function totalPrice() {
+        return cartList.reduce((count, p) => count += p.price * p.quantity ,0)
     }
 
     const deleteCart = () => {
@@ -43,7 +47,9 @@ const CartContextProvider = ({children}) => {
         <CartContext.Provider value = { {
             cartList,
             addToCart,
-            deleteItem,
+            removeFromCart,
+            totalQuantity,
+            totalPrice,
             deleteCart
         } }>
             {children}

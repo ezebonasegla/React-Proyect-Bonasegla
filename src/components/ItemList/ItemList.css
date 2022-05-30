@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 .view {
-    background: radial-gradient(1100px at 50% 50%, #fff 20%, #ccdc8c 100%);
+    background: radial-gradient(ellipse at top, rgb(240, 247, 246), transparent),
+            radial-gradient(ellipse at bottom, rgb(214, 243, 242), transparent);
 }
 
 .view h1 {
@@ -12,20 +13,13 @@
     font-family: 'Oswald', Helvetica, sans-serif;
     font-size: 60px;
     margin: auto;
-    transform: skewY(-5deg);
+    transform: skewY(-2deg);
     letter-spacing: 4px;
     word-spacing: -8px;
     color: #051922;
     text-shadow:
-        -1px -1px 0 #ccdc8c,
-        -2px -2px 0 #ccdc8c,
-        -3px -3px 0 #ccdc8c,
-        -4px -4px 0 #ccdc8c,
-        -5px -5px 0 #ccdc8c,
-        -6px -6px 0 #ccdc8c,
-        -7px -7px 0 #ccdc8c,
-        -8px -8px 0 #ccdc8c,
-        -30px 20px 40px dimgrey
+        -1px -1px 0 rgb(78, 226, 219),
+        -10px 20px 40px dimgrey
 }
 
 h1:first-letter {

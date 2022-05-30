@@ -4,7 +4,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Inicio from './components/pages/Inicio.jsx';
 import AboutUs from './components/pages/AboutUs.jsx';
 import Shop from './components/pages/Shop.jsx';
-import Cart from './components/pages/Cart';
+import Cart from './components/Cart/Cart.jsx';
 import NavBar from './components/navegation/Navbar.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -24,7 +24,7 @@ function App() {
               <Route path='/category/:id' element={<ItemListContainer />} />
               <Route path='*' element={<Navigate replace to="/" />} />
               <Route path="/detail/:id/:name" element={<ItemDetailContainer />} />
-              <Route path='cart' element={<Cart />} />
+              <Route path='/cart' element={<Cart />} />
             </Route>
           </Routes>
         </CartContextProvider>

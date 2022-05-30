@@ -1,10 +1,11 @@
 .card-container {
     margin: 10px;
+
 }
 
 .card {
     width: 250px;
-    height: 500px;
+    height: 460px;
     padding: 2em 1.5em;
     border: 2px solid grey;
     font-size: 18px;
@@ -16,16 +17,31 @@
 .p-name{
     padding-top: 5%;
     color: black;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 0.8em;
+    min-height: 50px;
+}
+
+.p-price{
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+}	
+
+.p-size{
+    font-size: 0.8em;
+    font-weight: 600;
+    color: black;
 }
 
 .link{
     text-decoration: none;
 }
 
-.card-image {
+.p-image {
     max-width: fit-content;
-    max-height: 12em;
-    min-height: 12em;
+    max-height: 9em;
+    min-height: fit-content;
     border-radius: 5px;
 }
+
