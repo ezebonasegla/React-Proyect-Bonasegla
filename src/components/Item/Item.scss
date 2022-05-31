@@ -39,9 +39,9 @@
 }
 
 .p-image {
-    max-width: fit-content;
-    max-height: 9em;
-    min-height: fit-content;
+    max-width: fit-content !important;
+    max-height: 9em !important;
+    min-height: fit-content !important;
     border-radius: 5px;
 }
 
