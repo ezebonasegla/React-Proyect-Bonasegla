@@ -28,8 +28,6 @@ function ItemListContainer() {
     .then(resp => setProducts( { id: resp.id, ...resp.data() }))
   }, []) */
 
-  console.log(products);
-
   const { id } = useParams();
 
   return (
