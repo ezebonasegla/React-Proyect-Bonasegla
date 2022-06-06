@@ -44,10 +44,10 @@ const CartContextProvider = ({ children }) => {
         setCartList([])
     }
 
-    async function placeAnOrder() {
+    async function placeAnOrder(buyer) {
         let order = {}
 
-        order.buyer = { name: 'Juan', lastName: 'Perez', email: 'JP@.com' }
+        order.buyer = { buyer }
         order.total = totalPrice()
 
         order.items = cartList.map(p => {
@@ -61,7 +61,6 @@ const CartContextProvider = ({ children }) => {
         const db = getFirestore()
         const queryCollection = collection(db, 'orders')
         addDoc(queryCollection, order)
-            .then(resp => console.log(resp))
             .catch(err => console.log(err))
             .finally(() => deleteCart())
 

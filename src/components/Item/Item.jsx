@@ -8,6 +8,8 @@ function Item({ product }) {
 
 const { addToCart } = useCartContext()
 
+function handleInputType(){}
+
 function onAdd(quantity) {
   alert(`${quantity} ${product.name} agregados al carrito`)
   addToCart({...product, quantity})
@@ -26,7 +28,7 @@ function onAdd(quantity) {
           </div>
         <br></br>
         <div className="card-button">
-          <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+          <ItemCount stock={product.stock} initial={1} onAdd={onAdd} handleInputType={handleInputType} />
         </div>
       </div>
     </div>

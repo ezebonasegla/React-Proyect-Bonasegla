@@ -1,0 +1,49 @@
+form {
+    h2{
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    input{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    label {
+        line-height: 2;
+        text-align: left;
+        display: block;
+        margin-bottom: 13px;
+        margin-top: 20px;
+        color: black;
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    select{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid black;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 200;
+        color: white;
+        cursor: pointer;
+    }
+
+}

@@ -5,12 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { FormExample } from '../Form/Form';
 
 
 
 export default function Cart() {
 
-    const { cartList, removeFromCart, totalPrice, placeAnOrder } = useCartContext();
+    const { cartList, removeFromCart, totalPrice } = useCartContext();
     const envioPrice = 200;
 
     return (
@@ -76,7 +77,8 @@ export default function Cart() {
                                             <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Total</strong>
                                                 <h5 className="fw-bold">$ {totalPrice() + envioPrice}</h5>
                                             </li>
-                                        </ul><a onClick={placeAnOrder} className="btn btn-success rounded-pill py-2 d-md-block">COMPRAR</a>
+                                        </ul>
+                                        <FormExample />
                                     </div>
                                 </div>
                             </div>
