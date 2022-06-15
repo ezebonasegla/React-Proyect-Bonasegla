@@ -21,10 +21,9 @@ function App() {
               <Route index element={<Inicio />} />
               <Route path='aboutUs' element={<AboutUs />} />
               <Route path='shop' element={<Shop />} />
-              <Route path='/category/:id' element={<ItemListContainer />} />
-              <Route path='*' element={<Navigate replace to="/" />} />
-              <Route path="/detail/:id/:name" element={<ItemDetailContainer />} />
               <Route path='/cart' element={<Cart />} />
+              <Route path='/category/:id' element={<ItemListContainer />} />
+              <Route path="/detail/:id/:name" element={<ItemDetailContainer />} />
             </Route>
           </Routes>
         </CartContextProvider>
