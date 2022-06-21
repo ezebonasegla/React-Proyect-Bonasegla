@@ -5,7 +5,7 @@ import './GoToShopButton.scss'
 function GoToShopButton(props) {
     return (
         <>
-            {props.black == 'no' ?
+            {props.black === 'no' ?
                 <Link to={"/shop"}>
                     <a className="boxed-btn"><svg width="277" height="62">
                         <defs>

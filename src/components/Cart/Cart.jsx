@@ -94,7 +94,7 @@ export default function Cart() {
                                         <div className="col-md-12">
                                             <div className="card-body cart">
                                                 <div className="col-sm-12 empty-cart-cls text-center">
-                                                    <img src={bag} width="130" height="130" className="img-fluid mb-4 mr-3" />
+                                                    <img alt='bag' src={bag} width="130" height="130" className="img-fluid mb-4 mr-3" />
                                                     <h3><strong>El carrito esta vacio</strong></h3>
                                                     <h4>Agrega productos para poder comprarlos :)</h4>
                                                     <GoToShopButton black='yes' />
