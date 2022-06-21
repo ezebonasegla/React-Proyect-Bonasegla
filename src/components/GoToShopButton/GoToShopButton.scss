@@ -1,0 +1,63 @@
+a.boxed-btn {
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    font-size: 0.5em;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.045em;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.boxed-btn svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.boxed-btn svg rect {
+    //stroke: #EC0033;
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.boxed-btn span {
+    background: -moz-linear-gradient(left, #ccdc8c 0%, #dfe0db 100%);
+    background: -webkit-linear-gradient(left, #ccdc8c 0%, #dfe0db 100%);
+    background: linear-gradient(to right, #ccdc8c 0%, #dfe0db 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8282', endColorstr='#e178ed', GradientType=1);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.boxed-btn:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+
+.boxed-btn .span2 {
+    background: -moz-linear-gradient(left, #043d4e 0%, #0d0e0c 100%);
+    background: -webkit-linear-gradient(left, #043d4e 0%, #0d0e0c 100%);
+    background: linear-gradient(to right, #043d4e 0%, #0d0e0c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8282', endColorstr='#e178ed', GradientType=1);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+

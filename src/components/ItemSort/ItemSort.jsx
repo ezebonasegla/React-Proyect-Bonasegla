@@ -3,7 +3,7 @@ import ItemSearch from '../ItemSearch/ItemSearch';
 import { useState } from 'react';
 
 function ItemSort({products}) {
-    const [sort, setSort] = useState('lowest-price');
+    const [sort, setSort] = useState('relevance');
 
     const sortBy = (sort) => {
         if (sort === 'lowest-price') {

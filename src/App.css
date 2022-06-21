@@ -3,7 +3,7 @@
   min-height: 100vh;
   height: max-content;
   background: radial-gradient(ellipse at top, rgb(240, 247, 246), transparent),
-            radial-gradient(ellipse at bottom, rgb(214, 243, 242), transparent);
+            radial-gradient(ellipse at bottom, rgb(179, 194, 193), transparent);
 }
 
 

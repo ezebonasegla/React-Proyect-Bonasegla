@@ -1,0 +1,145 @@
+.hero-bg {
+    background-image: url(../assets/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 92.77vh;
+    height: max-content;
+}
+
+.hero-text {
+    display: table;
+    position: relative;
+    padding-top: 20%;
+}
+
+.hero-text-tablecell {
+    display: table-cell;
+}
+
+.hero-area {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.hero-area:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #07212e;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+
+.hero-text p.subtitle {
+    color: #ccdc8c;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 15px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.hero-area div {
+    height: 100%;
+}
+
+.hero-area div.hero-text {
+    height: 100%;
+    width: 100%;
+}
+
+.hero-area div.hero-text-tablecell {
+    height: auto;
+    vertical-align: middle;
+}
+
+.hero-area div.hero-text-tablecell div {
+    height: auto;
+    vertical-align: middle;
+}
+
+.hero-btns {
+    margin-top: 35px;
+}
+
+.hero-btns a.bordered-boxed-btn {
+    margin-left: 15px;
+}
+
+.hero-area div.hero-form {
+    background-color: #fff;
+    text-align: center;
+    width: 380px;
+    margin: 0 auto;
+    margin-right: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #2d2d2d;
+    position: absolute;
+    right: 30px;
+    bottom: -15%;
+    height: 600px;
+}
+
+a.boxed-btn {
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    font-size: 0.5em;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.045em;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.boxed-btn svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.boxed-btn svg rect {
+    //stroke: #EC0033;
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.boxed-btn span {
+    background: -moz-linear-gradient(left, #ccdc8c 0%, #dfe0db 100%);
+    background: -webkit-linear-gradient(left, #ccdc8c 0%, #dfe0db 100%);
+    background: linear-gradient(to right, #ccdc8c 0%, #dfe0db 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8282', endColorstr='#e178ed', GradientType=1);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.boxed-btn:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}

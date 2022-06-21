@@ -1,15 +1,19 @@
-h1{
+h1 {
     font-size: 1.5em;
     font-weight: 500;
     padding-top: 1em;
 }
 
-.img-fluid{
-        max-width: 120px;
-        max-height: 120px;
-    }
+.img-fluid {
+    max-width: 120px;
+    max-height: 120px;
+}
 
-    .card .card-body {
-        padding: 30px;
-        background-color: transparent;
+.card-body {
+    padding: 30px;
+    background-color: transparent;
+
+    h4 {
+        margin-bottom: 2em;
     }
+}

@@ -10,8 +10,12 @@ function ItemSearch({ products }) {
     useEffect(() => {
         setSearchedProducts(
             products.filter(product =>
-                product.name.toLowerCase().includes(search.toLowerCase())
-            )
+                product.type.toLowerCase().includes(search.toLowerCase()
+                )
+                ||
+
+                product.name.toLowerCase().includes(search.toLowerCase()
+                ))
         );
 
     }, [search, products]);
@@ -20,20 +24,20 @@ function ItemSearch({ products }) {
 
     return (
         <>
-        <div className="search-container">
-            <TextField
-                id="search"
-                label="Buscar"
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                margin="normal"
-                variant="outlined"
-            />
+            <div className="search-container">
+                <TextField
+                    id="search"
+                    label="Buscar"
+                    value={search}
+                    onChange={e => setSearch(e.target.value)}
+                    margin="normal"
+                    variant="outlined"
+                />
             </div>
             <div className="item-list">
-            {
-                searchedProducts.map(product => <Item key={product.id} product={product} />)
-            }
+                {
+                    searchedProducts.map(product => <Item key={product.id} product={product} />)
+                }
             </div>
 
         </>

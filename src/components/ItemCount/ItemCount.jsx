@@ -7,13 +7,13 @@ export default function ItemCount({ stock, initial, onAdd, handleInputType }) {
   const [quantity, setQuantity] = useState(initial);
 
   function increase() {
-    if ( quantity < stock ) {
+    if (quantity < stock) {
       setQuantity(quantity + 1);
     }
   }
 
   function decrease() {
-    if ( quantity > 1 ) {
+    if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   }
@@ -42,8 +42,11 @@ export default function ItemCount({ stock, initial, onAdd, handleInputType }) {
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
+      {stock > 0 ? 
       <button className="button-cart"
-      onClick={addToCart}><span> <FontAwesomeIcon icon={faCartPlus} /> </span> Agregar al carrito</button>
+        onClick={addToCart}><span> <FontAwesomeIcon icon={faCartPlus} /> </span> Agregar al carrito</button>
+      :
+      <button className="button-cart-no-stock"> Sin Stock </button>}
     </div>
   );
 }

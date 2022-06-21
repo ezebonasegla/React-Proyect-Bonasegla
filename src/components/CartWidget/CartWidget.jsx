@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext';
 
 const CartWidget = () => {
-    const { totalQuantity, cartList } = useCartContext();
+    const { totalProducts, cartList } = useCartContext();
 
     return (
         <div className="cart-widget">
             <Link to="/cart">
-                <FontAwesomeIcon icon={faCartShopping} className="cart-icon" /></Link>
+                <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
                 {cartList.length > 0 ?
-                <span className="qty-display">{totalQuantity()}</span>
-                : null}       
+                    <span className="qty-display">{totalProducts}</span>
+                    : null}
+            </Link>
         </div>
     );
 };

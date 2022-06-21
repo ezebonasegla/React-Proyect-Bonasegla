@@ -1,11 +1,11 @@
 import { useCartContext } from '../../Context/CartContext';
 import "./Cart.scss";
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import bag from '../assets/bag.png';
 import React from 'react';
 import { FormExample } from '../Form/Form';
+import GoToShopButton from '../GoToShopButton/GoToShopButton';
 
 
 
@@ -88,18 +88,16 @@ export default function Cart() {
                         :
                         <section className="py-5">
                             <div className="container px-4 px-lg-5 my-5">
-                                <div class="container-fluid  mt-100">
-                                    <div class="row">
+                                <div className="container-fluid  mt-100">
+                                    <div className="row">
 
-                                        <div class="col-md-12">
-                                            <div class="card-body cart">
-                                                <div class="col-sm-12 empty-cart-cls text-center">
-                                                    <img src={bag} width="130" height="130" class="img-fluid mb-4 mr-3" />
+                                        <div className="col-md-12">
+                                            <div className="card-body cart">
+                                                <div className="col-sm-12 empty-cart-cls text-center">
+                                                    <img src={bag} width="130" height="130" className="img-fluid mb-4 mr-3" />
                                                     <h3><strong>El carrito esta vacio</strong></h3>
                                                     <h4>Agrega productos para poder comprarlos :)</h4>
-                                                    <Link to={"/shop"}>
-                                                        <a class="btn btn-primary cart-btn-transform m-3" data-abc="true">Ir a la tienda</a>
-                                                    </Link>
+                                                    <GoToShopButton black='yes' />
                                                 </div>
                                             </div>
                                         </div>

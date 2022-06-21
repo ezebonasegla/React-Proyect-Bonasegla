@@ -9,6 +9,7 @@ export const useCartContext = () => useContext(CartContext)
 const CartContextProvider = ({ children }) => {
 
     const [cartList, setCartList] = useState([])
+    const [totalProducts, setTotalProducts] = useState(0)
 
     function isInCart(id) {
         return cartList.some(p => p.id === id)
@@ -19,21 +20,28 @@ const CartContextProvider = ({ children }) => {
             let i = cartList.findIndex(p => p.id === item.id);
             const newCartList = cartList;
             newCartList[i].quantity += item.quantity;
-            setCartList(newCartList);
+            updateCart(newCartList);
         } else {
-            setCartList([
+            updateCart([
                 ...cartList,
                 item
             ]);
         }
     }
 
-    function removeFromCart(id) {
-        setCartList(cartList.filter(p => p.id !== id))
+    function updateCart(arr){
+        setCartList(arr)
+        setTotalProducts(
+            arr.map(p => p.quantity)
+            .reduce((a, p) => a + p, 0)
+        )
     }
-
+    
     function totalQuantity() {
         return cartList.reduce((acc, p) => acc + p.quantity, 0)
+    }
+    function removeFromCart(id) {
+        updateCart(cartList.filter(p => p.id !== id))
     }
 
     function totalPrice() {
@@ -66,7 +74,7 @@ const CartContextProvider = ({ children }) => {
 
 
         const queryCollectionStock = collection(db, 'productos')
-        const queryUpdateStock = await query(
+        const queryUpdateStock = query(
             queryCollectionStock,
             where(documentId(), 'in', cartList.map(p => p.id))
         )
@@ -90,7 +98,8 @@ const CartContextProvider = ({ children }) => {
             totalQuantity,
             totalPrice,
             deleteCart,
-            placeAnOrder
+            placeAnOrder,
+            totalProducts
         }}>
             {children}
         </CartContext.Provider>
