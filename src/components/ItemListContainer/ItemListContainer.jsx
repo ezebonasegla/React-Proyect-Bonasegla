@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
-import { getFirestore, getDocs, collection, where, query } from 'firebase/firestore'
+import { getFirestore, getDocs, collection } from 'firebase/firestore'
 
 
 function ItemListContainer() {
@@ -14,19 +14,12 @@ function ItemListContainer() {
     const db = getFirestore()
 
     const queryCollection = collection(db, 'productos')
-    /* const queryCollectionFilter = query(queryCollection, where('type', '==', 'vodka')) */
     getDocs(queryCollection)
       .then(resp => setProducts(resp.docs.map(product => ({ id: product.id, ...product.data() }))))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, [])
 
-  /* useEffect(() => {
-    const db = getFirestore()
-    const dbQuery = doc(db, 'productos', 'ALtDxAhPxyKV7CBUXmfm')
-    getDoc(dbQuery)
-    .then(resp => setProducts( { id: resp.id, ...resp.data() }))
-  }, []) */
 
   const { id } = useParams();
 

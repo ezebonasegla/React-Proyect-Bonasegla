@@ -16,6 +16,8 @@ function ItemSearch({ products }) {
 
     }, [search, products]);
 
+
+
     return (
         <>
         <div className="search-container">
