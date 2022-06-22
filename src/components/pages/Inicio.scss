@@ -91,7 +91,7 @@
     height: 600px;
 }
 
-a.boxed-btn {
+.boxed-btn {
     margin: 10px;
     position: relative;
     display: inline-block;
@@ -133,7 +133,7 @@ a.boxed-btn {
     background: -webkit-linear-gradient(left, #ccdc8c 0%, #dfe0db 100%);
     background: linear-gradient(to right, #ccdc8c 0%, #dfe0db 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8282', endColorstr='#e178ed', GradientType=1);
-
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

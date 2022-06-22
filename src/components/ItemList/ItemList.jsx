@@ -23,5 +23,4 @@ function ItemList({ products, id }) {
   )
 }
 
-
 export default ItemList

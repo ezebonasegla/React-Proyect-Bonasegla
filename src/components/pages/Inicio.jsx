@@ -17,8 +17,7 @@ const inicio = () => {
                                     <h1>Delivery de Bebidas</h1>
                                     <div className="hero-btns">
                                         <GoToShopButton black='no' />
-                                        <Link to={"/aboutUs"}>
-                                            <a className="boxed-btn"><svg width="277" height="62">
+                                        <Link to={"/aboutUs"} className="boxed-btn"><svg width="277" height="62">
                                                 <defs>
                                                     <linearGradient id="grad1">
                                                         <stop offset="0%" stopColor="#dfe0db" />
@@ -27,7 +26,7 @@ const inicio = () => {
                                                 </defs>
                                                 <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
                                             </svg>
-                                                <span>Acerca de Nosotros</span></a>
+                                                <span>Acerca de Nosotros</span>
                                         </Link>
                                     </div>
                                 </div>
