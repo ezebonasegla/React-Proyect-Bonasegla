@@ -1,10 +1,7 @@
-# Getting Started with Create React App
+# BonaDrinks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+BonaDrinks es la mejor pagina de delivery de bebidas en Zona Sur. Ofrece los mejores precios y calidad de productos. 
+Conoce nuestra pagina en https://react-proyect-bonasegla.vercel.app/
 
 ### `npm start`
 
