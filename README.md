@@ -4,7 +4,7 @@ BonaDrinks es la mejor pagina de delivery de bebidas en Zona Sur. Ofrece los mej
 Conoce nuestra pagina en https://react-proyect-bonasegla.vercel.app/
 
 ### Funcion comprar en BonaDrinks
-<img src="./src/components/assets/GIF.gif" width="40" height="40" />
+<img src="./src/components/assets/GIF.gif" width="240" height="240" />
 
 
 ### `npm start`
